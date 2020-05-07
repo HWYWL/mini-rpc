@@ -1,5 +1,20 @@
 # 一个mini的RPC框架
 
+### 安装
+**maven**
+```
+<dependency>
+  <groupId>com.github.hwywl</groupId>
+  <artifactId>mini-rpc</artifactId>
+  <version>1.0.1-RELEASE</version>
+</dependency>
+```
+
+**Gradle**
+```
+implementation 'com.github.hwywl:mini-rpc:1.0.1-RELEASE'
+```
+
 ### 说明
 这是一个实验性的RPC框架，麻雀虽小但是五脏俱全，基本上RPC的有的功能基础功能都实现了，比如注册发现，反向代理调用等。
 
@@ -87,6 +102,11 @@ public class Client {
 ![JX32qg.png](https://s1.ax1x.com/2020/05/01/JX32qg.png)
 
 具体实现可以参考源码。
+
+### 缺陷
+- 没有使用成熟的注册中心，现在的注册都是手动写死，不能做到动态发现
+- 使用JDK动态代理，只能注册接口
+- 没有错误处理机制，只有日志报错
 
 ### 问题建议
 
